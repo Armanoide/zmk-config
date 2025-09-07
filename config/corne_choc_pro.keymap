@@ -30,7 +30,6 @@
 
         default_layer {
             /* display-name = "gallium"; */
-
             // --------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Y  |  U   |  I  |  O  |  P  | BSPC |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |  LALT |  RALT |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -38,9 +37,9 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC         &kp B  &mt PIPE LA(RA(L))  &kp D     &kp C             &kp V      &trans  &trans  &kp Z    &kp Y  &kp O                           &kp U          &kp COMMA            &kp BSPC
-&kp LEFT_SHIFT  &kp N  &kp R               &kp T     &kp S             &kp G      &trans  &trans  &kp P    &kp H  &kp A                           &kp E          &mt BACKSLASH SLASH  &kp RIGHT_SHIFT
-&kp TAB         &kp Q  &kp X               &kp M     &kp W             &kp S                      &kp K    &kp F  &mt DOUBLE_QUOTES SINGLE_QUOTE  &kp SEMICOLON  &kp DOT              &sl 1
+&kp ESC         &kp B  &mt PIPE LA(RA(L))  &kp D     &kp C             &kp V      &trans  &trans  &kp Z    &kp Y  &kp O                           &kp U          &kp COMMA  &kp BSPC
+&kp LEFT_SHIFT  &kp N  &kp R               &kp T     &kp S             &kp G      &trans  &trans  &kp P    &kp H  &kp A                           &kp E          &kp I      &kp RIGHT_SHIFT
+&kp TAB         &kp Q  &kp X               &kp M     &kp W             &kp S                      &kp K    &kp F  &mt DOUBLE_QUOTES SINGLE_QUOTE  &kp SEMICOLON  &kp DOT    &to 1
                                            &kp LGUI  &kp LEFT_CONTROL  &kp SPACE                  &kp RET  &mo 1  &kp RALT
             >;
 
@@ -50,7 +49,6 @@
 
         lower_layer {
             /* display-name = "NUMBER"; */
-
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5    |  LCTRL | RCTRL |  6  |  7  |  8  |  9  |  0  | BSPC |
             // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5   |  LALT  | RALT  | LFT | DWN |  UP | RGT |     |      |
@@ -58,18 +56,17 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&kp TAB    &mt EXCLAMATION N1  &mt AT_SIGN N2   &mt HASH N3        &trans            &kp PAGE_UP    &trans  &trans  &trans          &trans          &trans         &trans     &trans  &kp BSPC
-&kp LCTRL  &mt DOLLAR N4       &mt PERCENT N5   &mt CARET N6       &kp N0            &trans         &trans  &trans  &kp H           &kp J           &kp K          &kp L      &trans  &trans
-&kp LSHFT  &mt AMPERSAND N7    &mt ASTERISK N8  &mt UNDERSCORE N9  &trans            &kp PAGE_DOWN                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT  &trans  &sl 2
-                                                &kp LGUI           &kp LEFT_CONTROL  &kp SPACE                      &kp ENTER       &mo 2           &kp RIGHT_ALT
+&kp TAB  &mt EXCLAMATION N1  &mt AT_SIGN N2   &mt HASH N3        &trans            &kp PAGE_UP    &trans  &trans  &trans          &trans          &trans         &trans     &trans  &kp BSPC
+&trans   &mt DOLLAR N4       &mt PERCENT N5   &mt CARET N6       &kp N0            &trans         &trans  &trans  &kp H           &kp J           &kp K          &kp L      &trans  &trans
+&trans   &mt AMPERSAND N7    &mt ASTERISK N8  &mt UNDERSCORE N9  &trans            &kp PAGE_DOWN                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT  &trans  &to 2
+                                              &kp LGUI           &kp LEFT_CONTROL  &kp SPACE                      &kp ENTER       &mo 2           &kp RIGHT_ALT
             >;
 
-            label = "Inum_and_nav";
+            label = "num/nav";
         };
 
         raise_layer {
             /* display-name = "SYMBOL"; */
-
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
             // | CTRL |     |     |     |     |     |  LALT | RALT  |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -79,7 +76,7 @@
             bindings = <
 &kp ESCAPE  &kp EXCL       &kp AT        &kp HASH        &trans            &trans     &trans  &trans  &trans     &kp PIPE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS          &kp BSPC
 &trans      &kp DOLLAR     &kp PERCENT   &kp CARET       &trans            &trans     &trans  &trans  &kp GRAVE  &kp EQUAL      &kp LBKT              &kp RBKT               &kp MINUS         &trans
-&kp LSHFT   &kp AMPERSAND  &kp ASTERISK  &kp UNDERSCORE  &trans            &trans                     &kp TILDE  &kp LESS_THAN  &kp LBRC              &kp RBRC               &kp GREATER_THAN  &sl 3
+&trans      &kp AMPERSAND  &kp ASTERISK  &kp UNDERSCORE  &trans            &trans                     &kp TILDE  &kp LESS_THAN  &kp LBRC              &kp RBRC               &kp GREATER_THAN  &to 3
                                          &kp LGUI        &kp LEFT_CONTROL  &kp SPACE                  &kp RET    &trans         &kp RALT
             >;
 
@@ -88,21 +85,25 @@
 
         extra_layer_1 {
             /* display-name = "EXTRA 1"; */
+
             bindings = <
 &kp ESCAPE      &kp A  &kp Z  &kp E             &kp R             &kp T      &trans  &trans  &kp Y      &kp U        &kp I                   &kp I                &kp O               &kp P
 &kp LEFT_SHIFT  &kp Q  &kp S  &kp D             &kp F             &kp G      &trans  &trans  &kp H      &kp J        &kp J                   &kp K                &kp L               &kp M
-&kp TAB         &kp W  &kp X  &kp C             &kp V             &kp B                      &kp B      &mt TILDE N  &mt LS(QUESTION) COMMA  &mt LS(SLASH) COLON  &mt LS(EQUAL) PLUS  &sl 4
+&kp TAB         &kp W  &kp X  &kp C             &kp V             &kp B                      &kp B      &mt TILDE N  &mt LS(QUESTION) COMMA  &mt LS(SLASH) COLON  &mt LS(EQUAL) PLUS  &to 4
                               &kp LEFT_COMMAND  &kp LEFT_CONTROL  &kp SPACE                  &kp ENTER  &mo 1        &kp RIGHT_ALT
             >;
+
+            label = "azerty";
         };
 
         extra_layer_2 {
             /* display-name = "EXTRA 2"; */
+
             bindings = <
-&bl BL_TOG       &bl BL_DEC       &bl BL_INC       &trans           &trans           &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_CLR       &bt BT_CLR_ALL   &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                  &trans  &trans  &trans  &trans  &trans  &trans
-                                                   &trans           &sl 0            &trans                           &trans  &trans  &trans
+&bl BL_TOG       &bl BL_DEC       &bl BL_INC       &trans           &trans           &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 2
+&bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_CLR       &bt BT_CLR_ALL   &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 1
+&rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                  &trans  &trans  &trans  &trans  &trans  &to 0
+                                                   &trans           &trans           &trans                           &trans  &trans  &trans
             >;
 
             label = "options";
