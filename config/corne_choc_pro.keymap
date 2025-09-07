@@ -29,7 +29,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "QWERTY";
+            /* display-name = "gallium"; */
 
             // --------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Y  |  U   |  I  |  O  |  P  | BSPC |
@@ -49,7 +49,7 @@
         };
 
         lower_layer {
-            display-name = "NUMBER";
+            /* display-name = "NUMBER"; */
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5    |  LCTRL | RCTRL |  6  |  7  |  8  |  9  |  0  | BSPC |
@@ -68,7 +68,7 @@
         };
 
         raise_layer {
-            display-name = "SYMBOL";
+            /* display-name = "SYMBOL"; */
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
@@ -87,7 +87,7 @@
         };
 
         extra_layer_1 {
-            display-name = "EXTRA 1";
+            /* display-name = "EXTRA 1"; */
             bindings = <
 &kp ESCAPE      &kp A  &kp Z  &kp E             &kp R             &kp T      &trans  &trans  &kp Y      &kp U        &kp I                   &kp I                &kp O               &kp P
 &kp LEFT_SHIFT  &kp Q  &kp S  &kp D             &kp F             &kp G      &trans  &trans  &kp H      &kp J        &kp J                   &kp K                &kp L               &kp M
@@ -97,7 +97,7 @@
         };
 
         extra_layer_2 {
-            display-name = "EXTRA 2";
+            /* display-name = "EXTRA 2"; */
             bindings = <
 &bl BL_TOG       &bl BL_DEC       &bl BL_INC       &trans           &trans           &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_CLR       &bt BT_CLR_ALL   &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
