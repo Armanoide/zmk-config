@@ -50,13 +50,13 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC         &kp B  &mts PIPE L  &kp D             &kp C      &kp V             &none  &none  &kp Z  &kp Y      &kp O                           &kp U      &kp COMMA  &kp BSPC
-&kp LEFT_SHIFT  &kp N  &kp R        &kp T             &kp S      &kp G             &none  &none  &kp P  &kp H      &kp A                           &kp E      &kp I      &kp RIGHT_SHIFT
-&kp TAB         &kp Q  &kp X        &kp M             &kp W      &kp J                           &kp K  &kp F      &mt DOUBLE_QUOTES SINGLE_QUOTE  &kp SLASH  &kp DOT    &none
-                                    &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_COMMAND                &mo 1  &kp ENTER  &kp RALT
+&kp ESC         &kp B  &mts PIPE L  &kp D             &kp W      &kp Z             &none  &none  &mts DOUBLE_QUOTES APOSTROPHE  &kp F      &kp O     &kp U      &kp J      &kp BSPC
+&kp LEFT_SHIFT  &kp N  &kp R        &kp T             &kp S      &kp G             &none  &none  &kp Y                          &kp H      &kp A     &kp E      &kp I      &kp RIGHT_SHIFT
+&kp TAB         &kp Q  &kp X        &kp M             &kp C      &kp V                           &kp K                          &kp P      &kp DOT   &kp SLASH  &kp COMMA  &none
+                                    &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_COMMAND                &mo 1                          &kp ENTER  &kp RALT
             >;
 
-            label = "gallium";
+            label = "graphite";
         };
 
         lower_layer {
