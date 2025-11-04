@@ -68,10 +68,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&kp ESCAPE  &mts EXCLAMATION N1  &mts AT_SIGN N2   &mts HASH N3        &none   &kp PAGE_UP    &none  &none  &none           &none           &none         &none      &none  &kp BSPC
-&none       &mts DOLLAR N4       &mts PERCENT N5   &mts CARET N6       &kp N0  &none          &none  &none  &kp H           &kp J           &kp K         &kp L      &none  &none
-&none       &mts AMPERSAND N7    &mts ASTERISK N8  &mts UNDERSCORE N9  &none   &kp PAGE_DOWN                &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none  &sl 2
-                                                   &trans              &trans  &trans                       &trans          &trans          &trans
+&kp ESCAPE      &mts EXCLAMATION N1  &mts AT_SIGN N2   &mts HASH N3        &none   &kp PAGE_UP    &none  &none  &none           &none           &none         &none      &none  &kp BSPC
+&kp LEFT_SHIFT  &mts DOLLAR N4       &mts PERCENT N5   &mts CARET N6       &kp N0  &none          &none  &none  &kp H           &kp J           &kp K         &kp L      &none  &kp RIGHT_SHIFT
+&none           &mts AMPERSAND N7    &mts ASTERISK N8  &mts UNDERSCORE N9  &none   &kp PAGE_DOWN                &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none  &sl 2
+                                                       &trans              &trans  &trans                       &trans          &trans          &trans
             >;
 
             label = "num/nav";
