@@ -18,10 +18,9 @@
     combos {
         compatible = "zmk,combos";
 
-        b_1 {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <11 10>;
-            layers = <0>;
+        layer_2 {
+            bindings = <&mo 2>;
+            key-positions = <43 42>;
         };
     };
 
