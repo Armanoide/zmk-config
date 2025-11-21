@@ -18,9 +18,9 @@
     combos {
         compatible = "zmk,combos";
 
-        layer_2 {
+        quick_layer2 {
             bindings = <&mo 2>;
-            key-positions = <43 42>;
+            key-positions = <43 41>;
         };
     };
 
