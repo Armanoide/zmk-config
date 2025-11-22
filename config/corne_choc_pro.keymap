@@ -79,6 +79,62 @@
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp BACKSLASH>;
         };
+
+        dp_dot: dp_dot {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DP_DOT";
+            #binding-cells = <0>;
+            tapping-term-ms = <350>;
+            bindings = <&kp DOT>, <&kp COMMA>, <&kp SEMICOLON>;
+        };
+
+        dp_quote: dp_quote {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DP_QUOTE";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp DOUBLE_QUOTES>;
+
+            tapping-term-ms = <350>;
+        };
+
+        dp_minus: dp_minus {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DP_MINUS";
+            #binding-cells = <0>;
+            tapping-term-ms = <350>;
+            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+        };
+
+        dp_plus: dp_plus {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DP_PLUS";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp EQUAL>;
+
+            tapping-term-ms = <350>;
+        };
+
+        dp_question_mark: dp_question_mark {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DP_QUESTION_MARK";
+            #binding-cells = <0>;
+            tapping-term-ms = <350>;
+            bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+        };
+
+        dp_colon: dp_colon {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DP_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp SEMICOLON>;
+        };
+
+        dp_at: dp_at {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DP_AT";
+            #binding-cells = <0>;
+            bindings = <&kp AT_SIGN>, <&kp HASH>;
+        };
     };
 
     keymap {
@@ -93,10 +149,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC         &kp B  &mts PIPE L  &kp D             &kp W      &kp Z             &none  &none  &mts DOUBLE_QUOTES APOSTROPHE  &kp F      &kp O     &kp U      &kp J      &kp BSPC
-&kp LEFT_SHIFT  &kp N  &kp R        &kp T             &kp S      &kp G             &none  &none  &kp Y                          &kp H      &kp A     &kp E      &kp I      &kp RIGHT_SHIFT
-&kp TAB         &kp Q  &kp X        &kp M             &kp C      &kp V                           &kp K                          &kp P      &kp DOT   &dp_slash  &kp COMMA  &none
-                                    &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_COMMAND                &dt_layer                      &kp ENTER  &kp RALT
+&kp ESC         &kp B  &kp L  &kp D             &kp W      &kp Z             &none  &none  &dp_quote  &kp F      &kp O     &kp U      &kp J      &kp BSPC
+&kp LEFT_SHIFT  &kp N  &kp R  &kp T             &kp S      &kp G             &none  &none  &kp Y      &kp H      &kp A     &kp E      &kp I      &kp RIGHT_SHIFT
+&kp TAB         &kp Q  &kp X  &kp M             &kp C      &kp V                           &kp K      &kp P      &dp_dot   &dp_slash  &dp_colon  &dp_question_mark
+                              &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_COMMAND                &dt_layer  &kp ENTER  &kp RALT
             >;
 
             label = "graphite";
@@ -111,8 +167,8 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&kp N1  &kp N2  &kp N3  &none     &none           &none            &none  &none  &dt_bracket  &dt_brace  &dt_parenthese  &dp_angle  &none  &kp BSPC
-&kp N4  &kp N5  &kp N6  &kp N0    &kp UP_ARROW    &none            &none  &none  &none        &kp K      &none           &none      &none  &none
+&kp N1  &kp N2  &kp N3  &none     &dp_at          &none            &none  &none  &dt_bracket  &dt_brace  &dt_parenthese  &dp_angle  &none  &kp BSPC
+&kp N4  &kp N5  &kp N6  &kp N0    &kp UP_ARROW    &none            &none  &none  &dp_minus    &kp K      &dp_plus        &none      &none  &none
 &kp N7  &kp N8  &kp N9  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW                &kp H        &kp J      &kp L           &none      &none  &sl 2
                         &trans    &trans          &trans                         &trans       &trans     &trans
             >;
@@ -129,10 +185,10 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE      &kp EXCL       &kp AT        &kp HASH        &none   &none   &none  &none  &none      &kp PIPE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS          &kp BSPC
-&kp LEFT_SHIFT  &kp DOLLAR     &kp PERCENT   &kp CARET       &none   &none   &none  &none  &kp GRAVE  &kp EQUAL      &kp LBKT              &kp RBKT               &kp MINUS         &kp RIGHT_SHIFT
-&kp TAB         &kp AMPERSAND  &kp ASTERISK  &kp UNDERSCORE  &none   &none                 &kp TILDE  &kp LESS_THAN  &kp LBRC              &kp RBRC               &kp GREATER_THAN  &to 3
-                                             &trans          &trans  &trans                &trans     &trans         &trans
+&kp ESCAPE      &none          &none         &none      &none   &none   &none  &none  &none      &kp PIPE  &none   &none  &none  &kp BSPC
+&kp LEFT_SHIFT  &kp DOLLAR     &kp PERCENT   &kp CARET  &none   &none   &none  &none  &kp GRAVE  &none     &none   &none  &none  &kp RIGHT_SHIFT
+&kp TAB         &kp AMPERSAND  &kp ASTERISK  &none      &none   &none                 &kp TILDE  &none     &none   &none  &none  &to 3
+                                             &trans     &trans  &trans                &trans     &trans    &trans
             >;
 
             label = "symbol";
