@@ -35,6 +35,34 @@
             hold-trigger-on-release;
             tapping-term-ms = <300>;
         };
+
+        dt_parenthese: dt_parenthese {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_PARENTHESE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+        };
+
+        dt_brace: dt_brace {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_BRACE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+        };
+
+        dt_bracket: dt_bracket {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_BRACKET";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        };
+
+        dt_layer: dt_layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_LAYER";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&mo 2>;
+        };
     };
 
     keymap {
@@ -52,7 +80,7 @@
 &kp ESC         &kp B  &mts PIPE L  &kp D             &kp W      &kp Z             &none  &none  &mts DOUBLE_QUOTES APOSTROPHE  &kp F      &kp O     &kp U      &kp J      &kp BSPC
 &kp LEFT_SHIFT  &kp N  &kp R        &kp T             &kp S      &kp G             &none  &none  &kp Y                          &kp H      &kp A     &kp E      &kp I      &kp RIGHT_SHIFT
 &kp TAB         &kp Q  &kp X        &kp M             &kp C      &kp V                           &kp K                          &kp P      &kp DOT   &kp SLASH  &kp COMMA  &none
-                                    &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_COMMAND                &mo 1                          &kp ENTER  &kp RALT
+                                    &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_COMMAND                &dt_layer                      &kp ENTER  &kp RALT
             >;
 
             label = "graphite";
@@ -67,10 +95,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&kp ESCAPE      &mts EXCLAMATION N1  &mts AT_SIGN N2   &mts HASH N3        &none   &kp PAGE_UP    &none  &none  &none           &none           &none         &none      &none  &kp BSPC
-&kp LEFT_SHIFT  &mts DOLLAR N4       &mts PERCENT N5   &mts CARET N6       &kp N0  &none          &none  &none  &kp H           &kp J           &kp K         &kp L      &none  &kp RIGHT_SHIFT
-&none           &mts AMPERSAND N7    &mts ASTERISK N8  &mts UNDERSCORE N9  &none   &kp PAGE_DOWN                &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none  &sl 2
-                                                       &trans              &trans  &trans                       &trans          &trans          &trans
+&kp N0          &kp N1     &kp N2       &kp N3              &kp N4  &kp PAGE_UP    &none  &none  &none           &none           &none         &none      &none  &kp BSPC
+&kp N5          &kp N6     &kp N7       &kp N8              &kp N9  &none          &none  &none  &kp H           &kp J           &kp K         &kp L      &none  &kp RIGHT_SHIFT
+&dt_parenthese  &dt_brace  &dt_bracket  &mts UNDERSCORE N9  &none   &kp PAGE_DOWN                &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none  &sl 2
+                                        &trans              &trans  &trans                       &trans          &trans          &trans
             >;
 
             label = "num/nav";
