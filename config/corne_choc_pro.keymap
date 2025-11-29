@@ -174,10 +174,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC         &kp B  &kp L  &kp D             &kp W      &kp Z             &none  &none  &dt_quote  &kp F      &kp O     &kp U      &kp J      &kp BSPC
-&kp LEFT_SHIFT  &kp N  &kp R  &kp T             &kp S      &kp G             &none  &none  &kp Y      &kp H      &kp A     &kp E      &kp I      &kp RIGHT_SHIFT
-&kp TAB         &kp Q  &kp X  &kp M             &kp C      &kp V                           &kp K      &kp P      &dt_dot   &dt_slash  &dt_colon  &dt_question_mark
-                              &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_COMMAND                &dt_layer  &kp ENTER  &kp RALT
+&kp ESC         &kp B  &kp L  &kp D             &kp W      &kp Z             &none  &none  &dt_quote  &kp F      &kp O    &kp U      &kp J      &kp BSPC
+&kp LEFT_SHIFT  &kp N  &kp R  &kp T             &kp S      &kp G             &none  &none  &kp Y      &kp H      &kp A    &kp E      &kp I      &kp RIGHT_SHIFT
+&kp TAB         &kp Q  &kp X  &kp M             &kp C      &kp V                           &kp K      &kp P      &dt_dot  &dt_slash  &dt_colon  &dt_question_mark
+                              &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_COMMAND                &dt_layer  &kp ENTER  &dt_alt
             >;
 
             label = "graphite";
