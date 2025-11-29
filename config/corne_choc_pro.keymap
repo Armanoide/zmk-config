@@ -147,14 +147,21 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DT_ALT";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT>, <&alt_space>;
+            bindings = <&kp RIGHT_ALT>, <&m_alt_space>;
 
             tapping-term-ms = <350>;
+        };
+
+        dt_ctrl: dt_ctrl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_CTRL";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL>, <&m_ctrl_space>;
         };
     };
 
     macros {
-        alt_space: alt_space {
+        m_alt_space: m_alt_space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -163,7 +170,18 @@
                 <&macro_release>,
                 <&kp RIGHT_ALT &kp SPACE>;
 
-            label = "ALT_SPACE";
+            label = "M_ALT_SPACE";
+        };
+
+        m_ctrl_space: m_ctrl_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp SPACE>,
+                <&macro_release>;
+
+            label = "M_CTRL_SPACE";
         };
     };
 
@@ -179,10 +197,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC         &kp B  &kp L  &kp D             &kp W      &kp Z             &none  &none  &dt_quote  &kp F      &kp O    &kp U      &kp J      &kp BSPC
-&kp LEFT_SHIFT  &kp N  &kp R  &kp T             &kp S      &kp G             &none  &none  &kp Y      &kp H      &kp A    &kp E      &kp I      &kp RIGHT_SHIFT
-&kp TAB         &kp Q  &kp X  &kp M             &kp C      &kp V                           &kp K      &kp P      &dt_dot  &dt_slash  &dt_colon  &dt_question_mark
-                              &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_COMMAND                &dt_layer  &kp ENTER  &dt_alt
+&kp ESC         &kp B  &kp L  &kp D     &kp W      &kp Z             &none  &none  &dt_quote  &kp F      &kp O    &kp U      &kp J      &kp BSPC
+&kp LEFT_SHIFT  &kp N  &kp R  &kp T     &kp S      &kp G             &none  &none  &kp Y      &kp H      &kp A    &kp E      &kp I      &kp RIGHT_SHIFT
+&kp TAB         &kp Q  &kp X  &kp M     &kp C      &kp V                           &kp K      &kp P      &dt_dot  &dt_slash  &dt_colon  &dt_question_mark
+                              &dt_ctrl  &kp SPACE  &kp LEFT_COMMAND                &dt_layer  &kp ENTER  &dt_alt
             >;
 
             label = "graphite";
