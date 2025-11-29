@@ -157,7 +157,7 @@
         alt_space: alt_space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(SPACE)>;
+            bindings = <&macro_press &kp RIGHT_ALT &kp SPACE>;
             label = "ALT_SPACE";
         };
     };
