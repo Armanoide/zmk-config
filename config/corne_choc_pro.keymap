@@ -199,7 +199,7 @@
             bindings = <
 &kp ESC         &kp B  &kp L  &kp D     &kp W      &kp Z             &none  &none  &dt_quote  &kp F      &kp O    &kp U      &kp J      &kp BSPC
 &kp LEFT_SHIFT  &kp N  &kp R  &kp T     &kp S      &kp G             &none  &none  &kp Y      &kp H      &kp A    &kp E      &kp I      &kp RIGHT_SHIFT
-&kp TAB         &kp Q  &kp X  &kp M     &kp C      &kp V                           &kp K      &kp P      &dt_dot  &dt_slash  &dt_colon  &dt_question_mark
+&kp TAB         &kp Q  &kp X  &kp M     &kp C      &kp V                           &kp K      &kp P      &dt_dot  &dt_slash  &dt_colon  &caps_word
                               &dt_ctrl  &kp SPACE  &kp LEFT_COMMAND                &dt_layer  &kp ENTER  &dt_alt
             >;
 
@@ -215,10 +215,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&kp N1  &kp N2  &kp N3  &none     &dt_at          &none            &none  &none  &dt_bracket  &dt_brace  &dt_parenthese  &dt_angle  &none  &kp BSPC
-&kp N4  &kp N5  &kp N6  &kp N0    &kp UP_ARROW    &none            &none  &none  &dt_minus    &kp K      &dt_plus        &none      &none  &kp RIGHT_SHIFT
-&kp N7  &kp N8  &kp N9  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW                &kp H        &kp J      &kp L           &none      &none  &sl 2
-                        &trans    &trans          &trans                         &trans       &trans     &trans
+&kp N1  &kp N2  &kp N3  &none     &dt_at          &none              &none  &none  &dt_bracket  &dt_brace  &dt_parenthese  &dt_angle  &none  &kp BSPC
+&kp N4  &kp N5  &kp N6  &kp N0    &kp UP_ARROW    &dt_question_mark  &none  &none  &dt_minus    &kp K      &dt_plus        &none      &none  &kp RIGHT_SHIFT
+&kp N7  &kp N8  &kp N9  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW                  &kp H        &kp J      &kp L           &none      &none  &caps_word
+                        &trans    &trans          &trans                           &trans       &trans     &trans
             >;
 
             label = "num/nav";
